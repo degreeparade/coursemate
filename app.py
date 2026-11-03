@@ -137,7 +137,10 @@ with tab_chat:
                         "and a question outside the notes, like *Who won the 2018 World Cup?*")
         for m in st.session_state.messages:
             with st.chat_message(m["role"], avatar="🧑‍🎓" if m["role"] == "user" else "📚"):
-                st.markdown(m["content"]) if m["role"] == "user" else render_answer(m["answer"])
+                if m["role"] == "user":
+                    st.markdown(m["content"])
+                else:
+                    render_answer(m["answer"])
         q = st.chat_input("Ask a doubt from your course material…")
         if q:
             st.session_state.messages.append({"role": "user", "content": q})

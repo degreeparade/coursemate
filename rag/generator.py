@@ -82,7 +82,8 @@ class ExtractiveGenerator:
     def generate(self, question: str, hits: list[Hit]) -> str:
         cands = []  # (hit_no, pos, sentence)
         for n, h in enumerate(hits[:4], start=1):
-            sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+|\n+", h.text) if len(x.strip()) >= 25]
+            text = re.sub(r"(?<![.!?:;])\n(?=[a-z])", " ", h.text)
+            sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+|\n+", text) if len(x.strip()) >= 25]
             sents = [x for x in sents if not x.rstrip().endswith("?")] or sents   # prefer statements over questions
             for pos, sent in enumerate(sents):
                 cands.append((n, pos, sent))
