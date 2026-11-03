@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+evaluation/results.csv
+evaluation/chunk_experiment.csv
+.pytest_cache/
+.env

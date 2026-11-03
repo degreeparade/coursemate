@@ -1,0 +1,13 @@
+Generative AI - End Semester Examination 2024
+Time: 3 hours        Maximum marks: 60
+
+Section A (2 marks each)
+1. Define Retrieval-Augmented Generation.
+2. What is chunk overlap and why is it used?
+3. Name two metrics used to evaluate retrieval quality.
+4. What is the role of a vector store in a RAG system?
+
+Section B (10 marks each)
+5. Explain the complete RAG pipeline with a neat diagram.
+6. Discuss how chunk size affects retrieval quality.
+7. Describe how a RAG assistant can detect and refuse out-of-syllabus questions.

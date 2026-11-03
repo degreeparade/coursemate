@@ -1,0 +1,12 @@
+streamlit>=1.50
+chromadb>=1.0
+pypdf>=4.0
+sentence-transformers>=3.0
+langchain-text-splitters>=0.3
+numpy
+pandas
+altair
+requests
+# Optional: only needed if you pick the "hf" generator in the sidebar
+# transformers>=4.44
+# accelerate
